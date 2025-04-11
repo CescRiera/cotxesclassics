@@ -1,0 +1,332 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'lemonmilk', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'apple', sans-serif;
+    background-color: #ccc;
+    color: #333;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+
+main {
+    flex-grow: 1; 
+}
+
+
+header {
+    font-family: 'lemonmilk', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 1;
+    color: white;
+    margin: 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+.section-heading {
+    font-family: 'lemonmilk', sans-serif;
+    font-size: 2.5rem;
+    padding: 30px;
+    text-align: center;
+    color: #000;
+    letter-spacing: 10px;
+}
+
+
+form {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+.form-group {
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: 'apple', sans-serif;
+    font-size: 20px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: 'apple', sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+
+footer {
+    font-family: 'apple', sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    position: relative;
+}
+
+footer p {
+    font-family: 'apple' sans-serif !important;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    form {
+        width: 80%;
+    }
+
+    .form-group label {
+        font-size: 17px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+        padding: 20px;
+    }
+
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 17px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    form {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    form button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+
+@font-face {
+    font-family: 'lemonmilk';
+    src: url('/fonts/Vogue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'apple';
+    src: url('/fonts/AppleGaramond-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
