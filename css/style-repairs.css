@@ -308,14 +308,14 @@ footer p {
 
 @font-face {
     font-family: 'lemonmilk';
-    src: url('/fonts/Vogue.ttf') format('truetype');
+    src: url('fonts/Vogue.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'apple';
-    src: url('/fonts/AppleGaramond-Light.ttf') format('truetype');
+    src: url('fonts/AppleGaramond-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
