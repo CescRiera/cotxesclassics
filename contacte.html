@@ -8,7 +8,7 @@
     <link rel="icon" href="images/logo.jpg" type="image/png">
 </head>
 <body>
-    <a href="#formulari-contacte" class="skip-link" tabindex="0">Saltar al formulari de contacte</a>
+    <a href="#main-content" class="skip-link" tabindex="0">Saltar al contingut principal</a>
 
     <header class="header">
         <h1 class="logo">
@@ -24,10 +24,10 @@
         </nav>
     </header>
 
-    <main>
-        <section id="formulari-contacte">
+    <main id="main-content">
+        <section id="formulari-contacte" aria-labelledby="contact-heading">
             <div class="section-heading">
-                <h2>Contacta amb nosaltres</h2>
+                <h2 id="contact-heading">Contacta amb nosaltres</h2>
             </div>
             <div class="section-1">
                 <form action="submit_form.php" method="POST" id="contact-form" novalidate>

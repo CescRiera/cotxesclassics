@@ -8,11 +8,18 @@
     <link rel="icon" href="images/logo.jpg" type="image/png" />
   </head>
   <body>
-    <a href="#home" class="skip-link" tabindex="0">Saltar al contingut principal</a>
+    <a href="#main-content" class="skip-link" tabindex="0">Saltar al contingut principal</a>
     
     <header class="header">
-      <h1 class="logo"><a href="index.html" aria-label="COTXESCLASSICS - Pàgina principal">COTXESCLASSICS</a></h1>
-      <nav class="nav-menu" aria-label="Navegació principal">
+      <h1 class="logo">
+        <a href="index.html" aria-label="COTXESCLASSICS - Pàgina principal"
+           style="color: inherit; text-decoration: none;"
+           onmouseover="this.style.color='inherit'; this.style.textDecoration='none';"
+           onmouseout="this.style.color='inherit'; this.style.textDecoration='none';">
+          COTXESCLASSICS
+        </a>
+      </h1>
+            <nav class="nav-menu" aria-label="Navegació principal">
         <ul class="nav-links">
           <li><a href="index.html" aria-current="page">Inici</a></li>
           <li><a href="about-us.html">Qui Som</a></li>
@@ -22,13 +29,13 @@
       </nav>
     </header>
 
-    <main>
-      <section id="home" class="section-1 center">
-        <h2 class="section-1-heading">Garatge Oficial de Cotxes Clàssics</h2>
+    <main id="main-content">
+      <section id="home" class="section-1 center" aria-labelledby="main-heading">
+        <h2 id="main-heading" class="section-1-heading">Garatge Oficial de Cotxes Clàssics</h2>
       </section>
 
-      <section id="popular-cars" class="section-2">
-        <h2 class="section-heading">Catàleg Clàssic</h2>
+      <section id="popular-cars" class="section-2" aria-labelledby="catalog-heading">
+        <h2 id="catalog-heading" class="section-heading">Catàleg Clàssic</h2>
         <div class="cards-wrapper center">
           <div class="card">
             <h3 class="car-name">Rolls-Royce Phantom</h3>
@@ -108,17 +115,35 @@
         </div>
       </section>
 
-      <section id="video-gallery" class="section-3">
-        <h2 class="section-heading">Galeria de Vídeos</h2>
+      <section id="video-gallery" class="section-3" aria-labelledby="videos-heading">
+        <h2 id="videos-heading" class="section-heading">Galeria de Vídeos</h2>
         <div class="videos-wrapper center">
-          <video src="images/car-video-1.mp4" muted controls class="video" aria-label="Vídeo de cotxe clàssic 1"></video>
-          <video src="images/car-video-2.mp4" muted controls class="video" aria-label="Vídeo de cotxe clàssic 2"></video>
-          <video src="images/car-video-3.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 3"></video>
+          <figure>
+            <video src="images/car-video-1.mp4" muted controls class="video" aria-label="Vídeo de cotxe clàssic 1"></video>
+            <figcaption class="visually-hidden">Vídeo de cotxe clàssic 1</figcaption>
+          </figure>
+          <figure>
+            <video src="images/car-video-2.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 2"></video>
+            <figcaption class="visually-hidden">Vídeo de cotxes clàssics 2</figcaption>
+          </figure>
+          <figure>
+            <video src="images/car-video-3.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 3"></video>
+            <figcaption class="visually-hidden">Vídeo de cotxes clàssics 3</figcaption>
+          </figure>
         </div>
         <div class="videos-wrapper center">
-          <video src="images/car-video-4.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 4"></video>
-          <video src="images/car-video-5.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 5"></video>
-          <video src="images/car-video-6.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 6"></video>
+          <figure>
+            <video src="images/car-video-4.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 4"></video>
+            <figcaption class="visually-hidden">Vídeo de cotxes clàssics 4</figcaption>
+          </figure>
+          <figure>
+            <video src="images/car-video-5.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 5"></video>
+            <figcaption class="visually-hidden">Vídeo de cotxes clàssics 5</figcaption>
+          </figure>
+          <figure>
+            <video src="images/car-video-6.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 6"></video>
+            <figcaption class="visually-hidden">Vídeo de cotxes clàssics 6</figcaption>
+          </figure>
         </div>
       </section>
     </main>

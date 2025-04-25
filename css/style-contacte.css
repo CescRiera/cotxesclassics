@@ -39,6 +39,7 @@ header {
     font-weight: 1;
     color: white;
     margin: 0;
+    color: inherit;
 }
 
 .logo a {

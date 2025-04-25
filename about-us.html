@@ -8,7 +8,7 @@
     <link rel="icon" href="images/logo.jpg" type="image/png">
 </head>
 <body>
-    <a href="#home" class="skip-link" tabindex="0">Saltar al contingut principal</a>
+    <a href="#main-content" class="skip-link" tabindex="0">Saltar al contingut principal</a>
     
     <header class="header">
         <h1 class="logo">
@@ -24,31 +24,33 @@
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="section-1 center">
+    <main id="main-content">
+        <article>
             <h2 class="section-1-heading">SOBRE NOSALTRES</h2>
-            <p class="text-section1">A COTXESCLASSICS, ens apassiona preservar la bellesa i la història dels cotxes clàssics. Oferim una col·lecció exclusiva de vehicles únics per a admirar i adquirir, amb un servei personalitzat per als amants del motor. A més, som experts en la reparació i restauració de cotxes clàssics, utilitzant peces originals i tècniques avançades per retornar-los al seu estat original. El nostre objectiu és mantenir viva la tradició i l'encant d'aquests automòbils històrics.</p>  
-        </section>
+            <section class="section-1 center">
+                <p class="text-section1">A COTXESCLASSICS, ens apassiona preservar la bellesa i la història dels cotxes clàssics. Oferim una col·lecció exclusiva de vehicles únics per a admirar i adquirir, amb un servei personalitzat per als amants del motor. A més, som experts en la reparació i restauració de cotxes clàssics, utilitzant peces originals i tècniques avançades per retornar-los al seu estat original. El nostre objectiu és mantenir viva la tradició i l'encant d'aquests automòbils històrics.</p>  
+            </section>
 
-        <section class="section-2">
-            <h2 class="visually-hidden">Els nostres serveis</h2>
+            <section class="section-2" aria-labelledby="services-heading">
+                <h2 id="services-heading" class="services-heading">Els nostres serveis</h2>
 
-            <div class="about-us-section left">
-                <img src="images/cotxeshow.jpg" alt="Sala d'exposició amb cotxes clàssics en perfecte estat de conservació" class="section-img">
-                <div class="text">
-                    <h3>Catàleg de Cotxes Clàssics</h3>
-                    <p>Explora la nostra impressionant col·lecció de cotxes clàssics rars i preservats de manera exquisida, cadascun amb el seu propi encant i història. Des de vehicles emblemàtics que van marcar una època fins a models més inusuals que s'han convertit en joies d'automòbil, cada cotxe que oferim té una història fascinant darrere. La nostra sala d'exposicions no és només un lloc per veure vehicles; és un refugi per als amants de l'automoció i els col·leccionistes que busquen una connexió autèntica amb el passat. Cada cotxe representa una peça única de l'evolució de l'automòbil, i el nostre equip s'encarrega de mantenir-los en un estat impecable, respectant la seva autenticitat i valor històric.</p>
+                <div class="about-us-section left">
+                    <img src="images/cotxeshow.jpg" alt="Sala d'exposició amb cotxes clàssics en perfecte estat de conservació" class="section-img">
+                    <div class="text">
+                        <h3>Catàleg de Cotxes Clàssics</h3>
+                        <p>Explora la nostra impressionant col·lecció de cotxes clàssics rars i preservats de manera exquisida, cadascun amb el seu propi encant i història. Des de vehicles emblemàtics que van marcar una època fins a models més inusuals que s'han convertit en joies d'automòbil, cada cotxe que oferim té una història fascinant darrere. La nostra sala d'exposicions no és només un lloc per veure vehicles; és un refugi per als amants de l'automoció i els col·leccionistes que busquen una connexió autèntica amb el passat. Cada cotxe representa una peça única de l'evolució de l'automòbil, i el nostre equip s'encarrega de mantenir-los en un estat impecable, respectant la seva autenticitat i valor històric.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="about-us-section right">
-                <img src="images/reparar.jpg" alt="Mecànic especialitzat treballant en la restauració d'un cotxe clàssic" class="section-img">
-                <div class="text">
-                    <h3>Reparacions i Restauracions</h3>
-                    <p>A COTXESCLASSICS, no només oferim cotxes clàssics de qualitat, sinó que també som especialistes en la reparació i restauració de vehicles clàssics. El nostre equip de tècnics experts es dedica a mantenir i restaurar cotxes de totes les èpoques, utilitzant només peces originals i tècniques d'última generació. La nostra feina no només consisteix a reparar vehicles, sinó a retornar-los a la seva antiga glòria, preservant la seva autenticitat i garantint que segueixin sent tan funcionals com estètics.</p>
+                <div class="about-us-section right">
+                    <img src="images/reparar.jpg" alt="Mecànic especialitzat treballant en la restauració d'un cotxe clàssic" class="section-img">
+                    <div class="text">
+                        <h3>Reparacions i Restauracions</h3>
+                        <p>A COTXESCLASSICS, no només oferim cotxes clàssics de qualitat, sinó que també som especialistes en la reparació i restauració de vehicles clàssics. El nostre equip de tècnics experts es dedica a mantenir i restaurar cotxes de totes les èpoques, utilitzant només peces originals i tècniques d'última generació. La nostra feina no només consisteix a reparar vehicles, sinó a retornar-los a la seva antiga glòria, preservant la seva autenticitat i garantint que segueixin sent tan funcionals com estètics.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </article>
     </main>
 
     <footer>
@@ -79,6 +81,11 @@
             overflow: hidden;
             clip: rect(0, 0, 0, 0);
             border: 0;
+        }
+        .services-heading {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
         }
     </style>
 </body>
