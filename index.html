@@ -8,11 +8,13 @@
     <link rel="icon" href="images/logo.jpg" type="image/png" />
   </head>
   <body>
+    <a href="#home" class="skip-link" tabindex="0">Saltar al contingut principal</a>
+    
     <header class="header">
-      <h1 class="logo">COTXESCLASSICS</h1>
-      <nav class="nav-menu">
+      <h1 class="logo"><a href="index.html" aria-label="COTXESCLASSICS - Pàgina principal">COTXESCLASSICS</a></h1>
+      <nav class="nav-menu" aria-label="Navegació principal">
         <ul class="nav-links">
-          <li><a href="index.html">Inici</a></li>
+          <li><a href="index.html" aria-current="page">Inici</a></li>
           <li><a href="about-us.html">Qui Som</a></li>
           <li><a href="repairs.html">Reparacions</a></li>
           <li><a href="contacte.html">Contacte</a></li>
@@ -20,110 +22,137 @@
       </nav>
     </header>
 
-    <section id="home" class="section-1 center">
-      <h1 class="section-1-heading">Garatge Oficial de Cotxes Clàssics</h1>
-    </section>
+    <main>
+      <section id="home" class="section-1 center">
+        <h2 class="section-1-heading">Garatge Oficial de Cotxes Clàssics</h2>
+      </section>
 
-    <section id="popular-cars" class="section-2">
-      <h1 class="section-heading">Catàleg Clàssic</h1>
-      <div class="cards-wrapper center">
-        <div class="card">
-          <h2 class="car-name">Rolls-Royce Phantom</h2>
-          <img src="images/car-1.jpg" class="card-img" />
-          <h3 class="car-price">$ 400,000</h3>
+      <section id="popular-cars" class="section-2">
+        <h2 class="section-heading">Catàleg Clàssic</h2>
+        <div class="cards-wrapper center">
+          <div class="card">
+            <h3 class="car-name">Rolls-Royce Phantom</h3>
+            <img src="images/car-1.jpg" class="card-img" alt="Rolls-Royce Phantom" />
+            <p class="car-price">$ 400,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Chevrolet Bel Air</h3>
+            <img src="images/car-2.jpg" class="card-img" alt="Chevrolet Bel Air" />
+            <p class="car-price">$ 50,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Volkswagen Beetle</h3>
+            <img src="images/car-3.jpg" class="card-img" alt="Volkswagen Beetle" />
+            <p class="car-price">$ 30,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Mercedes-Benz 560-Class</h3>
+            <img src="images/cotxe10.jpg" class="card-img" alt="Mercedes-Benz 560-Class" />
+            <p class="car-price">$ 120,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Chevrolet Apache</h3>
+            <img src="images/cotxe3.jpg" class="card-img" alt="Chevrolet Apache" />
+            <p class="car-price">$ 45,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Dodge Charger Clàssic</h3>
+            <img src="images/cotxe4.jpg" class="card-img" alt="Dodge Charger Clàssic" />
+            <p class="car-price">$ 75,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Mercedes-Benz 300 SLR</h3>
+            <img src="images/cotxe5.jpg" class="card-img" alt="Mercedes-Benz 300 SLR" />
+            <p class="car-price">$ 200,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Ford Mustang</h3>
+            <img src="images/cotxe6.jpg" class="card-img" alt="Ford Mustang" />
+            <p class="car-price">$ 55,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Rolls-Royce Silver Wraith</h3>
+            <img src="images/cotxe7.jpg" class="card-img" alt="Rolls-Royce Silver Wraith" />
+            <p class="car-price">$ 180,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Jaguar XK150</h3>
+            <img src="images/cotxe81.jpg" class="card-img" alt="Jaguar XK150" />
+            <p class="car-price">$ 90,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Chevrolet PickUp</h3>
+            <img src="images/cotxe9.jpg" class="card-img" alt="Chevrolet PickUp" />
+            <p class="car-price">$ 65,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Rolls-Royce Phantom</h3>
+            <img src="images/cotxe10.jpg" class="card-img" alt="Rolls-Royce Phantom" />
+            <p class="car-price">$ 400,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Rolls-Royce Corniche</h3>
+            <img src="images/cotxe11.jpg" class="card-img" alt="Rolls-Royce Corniche" />
+            <p class="car-price">$ 150,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Jaguar E-Type</h3>
+            <img src="images/cotxe12.jpg" class="card-img" alt="Jaguar E-Type" />
+            <p class="car-price">$ 80,000</p>
+          </div>
+          <div class="card">
+            <h3 class="car-name">Lamborghini Miura</h3>
+            <img src="images/cotxe13.jpg" class="card-img" alt="Lamborghini Miura" />
+            <p class="car-price">$ 450,000</p>
+          </div>
         </div>
-        <div class="card">
-          <h2 class="car-name">Chevrolet Bel Air</h2>
-          <img src="images/car-2.jpg" class="card-img" />
-          <h3 class="car-price">$ 50,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Volkswagen Beetle</h2>
-          <img src="images/car-3.jpg" class="card-img" />
-          <h3 class="car-price">$ 30,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Mercedes-Benz 560-Class</h2>
-          <img src="images/cotxe10.jpg" class="card-img" />
-          <h3 class="car-price">$ 120,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Chevrolet Apache</h2>
-          <img src="images/cotxe3.jpg" class="card-img" />
-          <h3 class="car-price">$ 45,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Dodge Charger Clàssic</h2>
-          <img src="images/cotxe4.jpg" class="card-img" />
-          <h3 class="car-price">$ 75,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Mercedes-Benz 300 SLR</h2>
-          <img src="images/cotxe5.jpg" class="card-img" />
-          <h3 class="car-price">$ 200,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Ford Mustang</h2>
-          <img src="images/cotxe6.jpg" class="card-img" />
-          <h3 class="car-price">$ 55,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Rolls-Royce Silver Wraith</h2>
-          <img src="images/cotxe7.jpg" class="card-img" />
-          <h3 class="car-price">$ 180,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Jaguar XK150</h2>
-          <img src="images/cotxe81.jpg" class="card-img" />
-          <h3 class="car-price">$ 90,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Chevrolet PickUp</h2>
-          <img src="images/cotxe9.jpg" class="card-img" />
-          <h3 class="car-price">$ 65,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Rolls-Royce Phantom</h2>
-          <img src="images/cotxe10.jpg" class="card-img" />
-          <h3 class="car-price">$ 400,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Rolls-Royce Corniche</h2>
-          <img src="images/cotxe11.jpg" class="card-img" />
-          <h3 class="car-price">$ 150,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Jaguar E-Type</h2>
-          <img src="images/cotxe12.jpg" class="card-img" />
-          <h3 class="car-price">$ 80,000</h3>
-        </div>
-        <div class="card">
-          <h2 class="car-name">Lamborghini Miura</h2>
-          <img src="images/cotxe13.jpg" class="card-img" />
-          <h3 class="car-price">$ 450,000</h3>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="video-gallery" class="section-3">
-      <h1 class="section-heading">Galeria de Vídeos</h1>
-      <div class="videos-wrapper center">
-        <video src="images/car-video-1.mp4" muted loop class="video"></video>
-        <video src="images/car-video-2.mp4" muted loop class="video"></video>
-        <video src="images/car-video-3.mp4" muted loop class="video"></video>
-      </div>
-      <div class="videos-wrapper center">
-        <video src="images/car-video-4.mp4" muted loop class="video"></video>
-        <video src="images/car-video-5.mp4" muted loop class="video"></video>
-        <video src="images/car-video-6.mp4" muted loop class="video"></video>
-      </div>
-    </section>
+      <section id="video-gallery" class="section-3">
+        <h2 class="section-heading">Galeria de Vídeos</h2>
+        <div class="videos-wrapper center">
+          <video src="images/car-video-1.mp4" muted controls class="video" aria-label="Vídeo de cotxe clàssic 1"></video>
+          <video src="images/car-video-2.mp4" muted controls class="video" aria-label="Vídeo de cotxe clàssic 2"></video>
+          <video src="images/car-video-3.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 3"></video>
+        </div>
+        <div class="videos-wrapper center">
+          <video src="images/car-video-4.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 4"></video>
+          <video src="images/car-video-5.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 5"></video>
+          <video src="images/car-video-6.mp4" muted controls class="video" aria-label="Vídeo de cotxes clàssics 6"></video>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p class="copyright">
-        Drets d'autor © Cotxes Classics - Tots els drets reservats
+        Drets d'autor &copy; Cotxes Classics - Tots els drets reservats
       </p>
     </footer>
+
+    <style>
+      .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 0;
+          background: #000;
+          color: white;
+          padding: 8px;
+          z-index: 100;
+      }
+      .skip-link:focus {
+          top: 0;
+      }
+      .visually-hidden {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          padding: 0;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          border: 0;
+      }
+    </style>
 
     <script src="script.js"></script>
   </body>

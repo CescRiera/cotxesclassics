@@ -5,47 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacte - Cotxes Classics</title>
     <link rel="stylesheet" href="css/style-contacte.css">
-    <link rel="icon" href="images/logo.jpg" type="image/png" />
+    <link rel="icon" href="images/logo.jpg" type="image/png">
 </head>
 <body>
+    <a href="#formulari-contacte" class="skip-link" tabindex="0">Saltar al formulari de contacte</a>
 
     <header class="header">
-        <h1 class="logo">COTXESCLASSICS</h1>
-        <nav class="nav-menu">
+        <h1 class="logo">
+            <a href="index.html" aria-label="COTXESCLASSICS - Pàgina principal">COTXESCLASSICS</a>
+        </h1>
+        <nav class="nav-menu" aria-label="Navegació principal">
             <ul class="nav-links">
                 <li><a href="index.html">Inici</a></li>
                 <li><a href="about-us.html">Qui Som</a></li>
                 <li><a href="repairs.html">Reparacions</a></li>
-                <li><a href="contacte.html">Contacte</a></li>
+                <li><a href="contacte.html" aria-current="page">Contacte</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <div class="section-heading">
-            <h2>Contacta amb nosaltres</h2>
-        </div>
-        <div class="section-1">
-            <form action="submit_form.php" method="POST">
-                <div class="form-group">
-                    <label for="name">Nom complet:</label>
-                    <input type="text" id="name" name="name" required placeholder="El teu nom complet" />
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Correu electrònic:</label>
-                    <input type="email" id="email" name="email" required placeholder="El teu correu electrònic" />
-                </div>
+    <main>
+        <section id="formulari-contacte">
+            <div class="section-heading">
+                <h2>Contacta amb nosaltres</h2>
+            </div>
+            <div class="section-1">
+                <form action="submit_form.php" method="POST" id="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nom complet:<span class="required" aria-hidden="true">*</span></label>
+                        <input type="text" id="name" name="name" required 
+                            aria-required="true"
+                            aria-describedby="name-error"
+                            placeholder="El teu nom complet">
+                        <span id="name-error" class="error-message" aria-live="polite"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correu electrònic:<span class="required" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required 
+                            aria-required="true"
+                            aria-describedby="email-error"
+                            placeholder="El teu correu electrònic">
+                        <span id="email-error" class="error-message" aria-live="polite"></span>
+                    </div>
 
-                <div class="form-group">
-                    <label for="message">Missatge:</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Escriu el teu missatge"     style="resize:none;"></textarea>
-                </div>
+                    <div class="form-group">
+                        <label for="message">Missatge:<span class="required" aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" rows="5" required 
+                            aria-required="true"
+                            aria-describedby="message-error"
+                            placeholder="Escriu el teu missatge"></textarea>
+                        <span id="message-error" class="error-message" aria-live="polite"></span>
+                    </div>
 
-                <button onclick="return false;">Enviar</button>
-            </form>
-        </div>
-    </section>
+                    <div class="form-info">
+                        <p>Els camps marcats amb <span class="required" aria-hidden="true">*</span><span class="visually-hidden">asterisc</span> són obligatoris</p>
+                    </div>
+
+                    <button type="submit" id="submit-button">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p class="copyright">
@@ -53,5 +74,118 @@
         </p>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const nameError = document.getElementById('name-error');
+            const emailError = document.getElementById('email-error');
+            const messageError = document.getElementById('message-error');
+            const submitButton = document.getElementById('submit-button');
+
+            // Validar els camps quan es canvia el focus
+            nameInput.addEventListener('blur', validateName);
+            emailInput.addEventListener('blur', validateEmail);
+            messageInput.addEventListener('blur', validateMessage);
+
+            // Validar el formulari quan s'envia
+            form.addEventListener('submit', function(event) {
+                let isValid = true;
+                
+                if (!validateName()) isValid = false;
+                if (!validateEmail()) isValid = false;
+                if (!validateMessage()) isValid = false;
+                
+                if (!isValid) {
+                    event.preventDefault();
+                }
+            });
+
+            function validateName() {
+                if (nameInput.value.trim() === '') {
+                    nameInput.setAttribute('aria-invalid', 'true');
+                    nameError.textContent = 'Si us plau, introdueix el teu nom';
+                    return false;
+                } else {
+                    nameInput.setAttribute('aria-invalid', 'false');
+                    nameError.textContent = '';
+                    return true;
+                }
+            }
+
+            function validateEmail() {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (emailInput.value.trim() === '') {
+                    emailInput.setAttribute('aria-invalid', 'true');
+                    emailError.textContent = 'Si us plau, introdueix el teu correu electrònic';
+                    return false;
+                } else if (!emailPattern.test(emailInput.value)) {
+                    emailInput.setAttribute('aria-invalid', 'true');
+                    emailError.textContent = 'Si us plau, introdueix un correu electrònic vàlid';
+                    return false;
+                } else {
+                    emailInput.setAttribute('aria-invalid', 'false');
+                    emailError.textContent = '';
+                    return true;
+                }
+            }
+
+            function validateMessage() {
+                if (messageInput.value.trim() === '') {
+                    messageInput.setAttribute('aria-invalid', 'true');
+                    messageError.textContent = 'Si us plau, introdueix el teu missatge';
+                    return false;
+                } else {
+                    messageInput.setAttribute('aria-invalid', 'false');
+                    messageError.textContent = '';
+                    return true;
+                }
+            }
+        });
+    </script>
+
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+        .error-message {
+            color: #d32f2f;
+            font-size: 0.875rem;
+            display: block;
+            margin-top: 4px;
+        }
+        .required {
+            color: #d32f2f;
+            margin-left: 4px;
+        }
+        .form-info {
+            margin-bottom: 16px;
+            font-size: 0.875rem;
+        }
+        [aria-invalid="true"] {
+            border-color: #d32f2f;
+        }
+    </style>
 </body>
 </html>
